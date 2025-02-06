@@ -7,10 +7,10 @@ public class MultiplesOf3or5Test {
     
     @Test
     public void testSolution() {
-        assertEquals(23, Solution.solution(10));  
-        assertEquals(78, Solution.solution(20));  
-        assertEquals(0, Solution.solution(0));  
-        assertEquals(0, Solution.solution(-5)); 
-        assertEquals(195, Solution.solution(25));  
+        assertEquals(23, MultiplesOf3or5Test.solution(10));  
+        assertEquals(78, MultiplesOf3or5Test.solution(20));  
+        assertEquals(0, MultiplesOf3or5Test.solution(0));  
+        assertEquals(0, MultiplesOf3or5Test.solution(-5)); 
+        assertEquals(195, MultiplesOf3or5Test.solution(25));  
     }
 }
