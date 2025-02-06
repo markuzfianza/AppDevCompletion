@@ -11,6 +11,6 @@ public class MultiplesOf3or5Test {
         assertEquals(78, MultiplesOf3or5Test.solution(20));  
         assertEquals(0, MultiplesOf3or5Test.solution(0));  
         assertEquals(0, MultiplesOf3or5Test.solution(-5)); 
-        assertEquals(195, MultiplesOf3or5Test.solution(25));  
+        assertEquals(143, MultiplesOf3or5Test.solution(25));  
     }
 }
