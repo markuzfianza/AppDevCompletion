@@ -1,3 +1,5 @@
+package hello;
+
 public class StringCleaning {
     static String stringClean(final String text) {
         StringBuilder s = new StringBuilder();
