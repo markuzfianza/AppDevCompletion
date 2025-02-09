@@ -2,7 +2,7 @@ package hello;
 
 import java.util.HashMap;
 
-public class findOdd {
+public class FindOdd {
     public static int findIt(int [] a) {
         HashMap<Integer, Integer> countMap = new HashMap<>();
 

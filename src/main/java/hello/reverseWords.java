@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
-public class reverseWords {
+public class ReverseWords {
     public static String reverseWords(final String original) {
         if (original == null || original.isEmpty()) {
             return original;
