@@ -1,5 +1,6 @@
 package hello;
 
+import hello.GoodVsEvil;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

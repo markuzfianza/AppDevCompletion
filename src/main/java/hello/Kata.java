@@ -1,3 +1,4 @@
+package hello;
 /**
  * 8 kyu : Sum of a Sequence
  * Link : https://www.codewars.com/kata/586f6741c66d18c22800010a
