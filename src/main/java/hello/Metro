@@ -1,0 +1,19 @@
+package hello;
+
+import java.util.ArrayList;
+
+class Metro {
+
+  public static int countPassengers(ArrayList<int[]> stops) {
+  int passengerCount = 0;
+
+        for (int i = 0; i < stops.size(); i++) {
+            int x = stops.get(i)[0];
+            int y = stops.get(i)[1];
+            passengerCount += stops.get(i)[0];
+            passengerCount -= stops.get(i)[1];
+        }
+
+        return passengerCount;
+  }
+}
