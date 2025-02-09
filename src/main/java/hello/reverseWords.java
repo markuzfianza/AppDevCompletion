@@ -1,17 +1,14 @@
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.StringJoiner;
+import java.util.stream.Collectors;
 
-public static String reverseWords(final String original)
-    {
-        StringBuilder stringBuilder = new StringBuilder();
-        StringJoiner stringJoiner = new StringJoiner(" ");
-        stringBuilder.append(original);
-        stringBuilder.reverse();
-        String [] stringArray = stringBuilder.toString().split(" ", stringBuilder.length());
-        Collections.reverse(Arrays.asList(stringArray));
-        for (int i = 0; i< stringArray.length; i++){
-            stringJoiner.add(stringArray[i]);
+public class StringUtil {
+    public static String reverseWords(final String original) {
+        if (original == null || original.isEmpty()) {
+            return original;
         }
-        return stringJoiner.toString();
+
+        return Arrays.stream(original.split(" "))
+                     .map(word -> new StringBuilder(word).reverse().toString())
+                     .collect(Collectors.joining(" "));
     }
+}
