@@ -1,36 +1,34 @@
 package hello;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.TreeSet;
 
-class DoubleLinear {
-    
+/**
+ * The DoubleLinear class implements an algorithm to generate the "dblLinear" sequence.
+ * This sequence is defined as follows:
+ * - Start with u(0) = 1.
+ * - Generate new elements using:
+ *   - y = 2 * u(x) + 1
+ *   - z = 3 * u(y) + 1
+ * - The sequence maintains uniqueness and is sorted in ascending order.
+ */
+public class DoubleLinear {
+
+    /**
+     * Computes the nth element in the "dblLinear" sequence.
+     * 
+     * @param n The index of the element to retrieve.
+     * @return The nth element in the sequence.
+     */
     public static int dblLinear(int n) {
-        List<Integer> u = new ArrayList<>();
+        TreeSet<Integer> u = new TreeSet<>();
         u.add(1);
 
-        int i = 0, j = 0;
-
-        for (int k = 0; k < n; k++) {
-            int y = 2 * u.get(i) + 1;
-            int z = 3 * u.get(j) + 1;
-
-            int next;
-            if (y < z) {
-                next = y;
-                i++;
-            } else if (y > z) {
-                next = z;
-                j++;
-            } else {
-                next = y;
-                i++;
-                j++;
-            }
-
-            u.add(next);
+        for (int i = 0; i < n; i++) {
+            int current = u.pollFirst(); // Retrieve and remove the smallest element
+            u.add(2 * current + 1);
+            u.add(3 * current + 1);
         }
 
-        return u.get(n);
+        return u.first(); // Get the nth element after n iterations
     }
 }
