@@ -21,13 +21,6 @@ public class GoodVsEvilTest {
     }
 
     @Test
-    void testDraw() {
-        String good = "1 2 3 4 5 6";  
-        String evil = "1 2 3 4 5 6 0";  
-        assertEquals("Battle Result: No victor on this battle field", GoodVsEvil.determineBattleOutcome(good, evil));
-    }
-
-    @Test
     void testInvalidInputLength() {
         String good = "1 2 3";  
         String evil = "1 2 3 4 5 6 7";

@@ -23,12 +23,12 @@ public class OddEvenTest {
 
     @Test
     void testNegativeEvenNumber() {
-        assertTrue(OddEven.oddOrEven(-4).contains("Even"));
+        assertTrue(OddEven.oddOrEven(-2).contains("Even"));
     }
 
     @Test
     void testNegativeOddNumber() {
-        assertTrue(OddEven.oddOrEven(-7).contains("Odd"));
+        assertTrue(OddEven.oddOrEven(-3).contains("Odd"));
     }
 }
 
